@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contato - Brasileiros pelo Mundo</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .contato-container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            background: #4a90e2;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #357abd;
+        }
+
+        @media (max-width: 768px) {
+            .contato-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Brasileiros pelo Mundo</h1>
+</header>
+
+<!-- MENU -->
+<nav class="menu">
+    <ul>
+        <li><a href="index.html">🏠 Início</a></li>
+        <li><a href="destinos.html">🌍 Destinos</a></li>
+        <li><a href="passeios.html">🎡 Passeios</a></li>
+        <li><a href="comidas.html">🍽️ Comidas</a></li>
+        <li><a href="passagens.html">✈️ Passagens</a></li>
+        <li><a href="contato.html">📩 Contato</a></li>
+    </ul>
+</nav>
+
+<main>
+
+<section class="contato-container">
+
+    <!-- INFO -->
+    <div class="contato-info">
+        <h2>📩 Fale Conosco</h2>
+        <p>Tem dúvidas ou sugestões? Envie sua mensagem.</p>
+
+        <div class="info-box">
+            <p>🌍 Brasileiros pelo Mundo</p>
+            <p>✉️ brasileirospelomundo100@gmail.com</p>
+            <p>📍 Europa</p>
+        </div>
+    </div>
+
+    <!-- FORM -->
+    <form id="contactForm">
+        <h3>Envie sua mensagem</h3>
+
+        <input type="text" id="nome" placeholder="Nome">
+        <input type="email" id="email" placeholder="E-mail">
+        <textarea id="mensagem" placeholder="Mensagem"></textarea>
+
+        <button type="submit">Enviar</button>
+
+        <p id="erro"></p>
+    </form>
+
+</section>
+
+</main>
+
+<footer>
+    <p>© 2026 Brasileiros pelo Mundo</p>
+</footer>
+
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const nome = document.getElementById("nome").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const mensagem = document.getElementById("mensagem").value.trim();
+    const erro = document.getElementById("erro");
+
+    if (nome.length < 3) {
+        erro.textContent = "O nome deve ter pelo menos 3 caracteres.";
+        erro.style.color = "red";
+        return;
+    }
+
+    const emailValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailValido.test(email)) {
+        erro.textContent = "Digite um e-mail válido.";
+        erro.style.color = "red";
+        return;
+    }
+
+    if (mensagem.length < 10) {
+        erro.textContent = "A mensagem deve ter pelo menos 10 caracteres.";
+        erro.style.color = "red";
+        return;
+    }
+
+    erro.textContent = "Mensagem enviada com sucesso!";
+    erro.style.color = "green";
+
+    this.reset();
+});
+</script>
+
+</body>
+</html>

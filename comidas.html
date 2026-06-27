@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Comidas - Brasileiros pelo Mundo</title>
+
+<meta name="description" content="Descubra comidas típicas da Europa com o site Brasileiros pelo Mundo.">
+<meta name="keywords" content="comidas, gastronomia, europa, turismo, viagens">
+<meta name="author" content="Brasileiros pelo Mundo">
+
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+
+/* =========================
+   TÍTULO
+========================= */
+
+.page-title {
+    text-align: center;
+    padding: 30px 10px;
+}
+
+/* =========================
+   FILTRO
+========================= */
+
+.filtro {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.filtro button {
+    margin: 5px;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 8px;
+    background: #4a90e2;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.filtro button:hover {
+    background: #357abd;
+}
+
+/* =========================
+   GRID
+========================= */
+
+.comidas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.card-comida {
+    background: #fff;
+    padding: 18px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    border-left: 5px solid #6EC1E4;
+}
+
+.card-comida:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+.card-comida h3 {
+    margin-bottom: 10px;
+}
+
+/* OCULTAR */
+.hidden {
+    display: none;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+    <h1>Brasileiros pelo Mundo</h1>
+</header>
+
+<!-- MENU -->
+<nav class="menu">
+    <ul>
+        <li><a href="index.html">🏠 Início</a></li>
+        <li><a href="destinos.html">🌍 Destinos</a></li>
+        <li><a href="passeios.html">🎡 Passeios</a></li>
+        <li><a href="comidas.html">🍽️ Comidas</a></li>
+        <li><a href="passagens.html">✈️ Passagens</a></li>
+        <li><a href="contato.html">📩 Contato</a></li>
+    </ul>
+</nav>
+
+<main>
+
+<div class="page-title">
+    <h2>🍽️ Gastronomia pelo Mundo</h2>
+    <p>Descubra sabores incríveis da Europa</p>
+</div>
+
+<!-- FILTRO -->
+<div class="filtro">
+    <button onclick="filtrar('todos')">Todos</button>
+    <button onclick="filtrar('franca')">França</button>
+    <button onclick="filtrar('italia')">Itália</button>
+    <button onclick="filtrar('espanha')">Espanha</button>
+    <button onclick="filtrar('alemanha')">Alemanha</button>
+    <button onclick="filtrar('portugal')">Portugal</button>
+</div>
+
+<section class="comidas">
+
+    <div class="card-comida franca">
+        <h3>🥖 França</h3>
+        <p>Croissant, Ratatouille</p>
+        <p>Alta gastronomia e padarias artesanais em Paris.</p>
+    </div>
+
+    <div class="card-comida italia">
+        <h3>🍝 Itália</h3>
+        <p>Pizza, Pasta, Gelato</p>
+        <p>Sabores tradicionais em Roma e Nápoles.</p>
+    </div>
+
+    <div class="card-comida espanha">
+        <h3>🥘 Espanha</h3>
+        <p>Paella, Tapas</p>
+        <p>Comida vibrante e cheia de sabor em Barcelona.</p>
+    </div>
+
+    <div class="card-comida alemanha">
+        <h3>🥩 Alemanha</h3>
+        <p>Salsichas, Schnitzel</p>
+        <p>Culinária forte e tradicional em Munique.</p>
+    </div>
+
+    <div class="card-comida portugal">
+        <h3>🥐 Portugal</h3>
+        <p>Bacalhau, Pastel de Nata</p>
+        <p>Tradição e sabor em Lisboa e Porto.</p>
+    </div>
+
+</section>
+
+</main>
+
+<footer>
+    <p>© 2026 Brasileiros pelo Mundo</p>
+</footer>
+
+<script>
+function filtrar(pais) {
+    const cards = document.querySelectorAll('.card-comida');
+
+    cards.forEach(card => {
+        if (pais === 'todos') {
+            card.style.display = 'block';
+        } else {
+            card.style.display = card.classList.contains(pais) ? 'block' : 'none';
+        }
+    });
+}
+</script>
+
+</body>
+</html>

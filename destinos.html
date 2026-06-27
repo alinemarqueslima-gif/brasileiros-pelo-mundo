@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Destinos - Brasileiros pelo Mundo</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+
+/* TITULO */
+.page-title {
+    text-align: center;
+    padding: 30px 10px;
+}
+
+/* GRID */
+.paises {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* CARD */
+.card-pais {
+    background: #fff;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    border-left: 6px solid #6EC1E4;
+}
+
+.card-pais:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+.card-pais h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.card-pais p {
+    margin-bottom: 8px;
+    line-height: 1.5;
+    color: #2c3e50;
+}
+
+.flag {
+    font-size: 1.5rem;
+    margin-right: 6px;
+}
+
+@media (max-width: 600px) {
+    .card-pais {
+        padding: 15px;
+    }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+    <h1>Brasileiros pelo Mundo</h1>
+</header>
+
+<!-- MENU -->
+<nav class="menu">
+    <ul>
+        <li><a href="index.html">🏠 Início</a></li>
+        <li><a href="destinos.html">🌍 Destinos</a></li>
+        <li><a href="passeios.html">🎡 Passeios</a></li>
+        <li><a href="comidas.html">🍽️ Comidas</a></li>
+        <li><a href="passagens.html">✈️ Passagens</a></li>
+        <li><a href="contato.html">📩 Contato</a></li>
+    </ul>
+</nav>
+
+<main>
+
+<div class="page-title">
+    <h2>🌍 Países Visitados</h2>
+    <p>Conheça alguns destinos incríveis da Europa</p>
+</div>
+
+<section class="paises">
+
+    <div class="card-pais">
+        <h3><span class="flag">🇵🇹</span> Portugal</h3>
+        <p>Lisboa, Porto, Aveiro, Algarve, Fátima e Viseu.</p>
+        <p>Cultura forte, história rica e gastronomia incrível.</p>
+    </div>
+
+    <div class="card-pais">
+        <h3><span class="flag">🇪🇸</span> Espanha</h3>
+        <p>Barcelona e Madrid.</p>
+        <p>Arquitetura impressionante e vida noturna vibrante.</p>
+    </div>
+
+    <div class="card-pais">
+        <h3><span class="flag">🇫🇷</span> França</h3>
+        <p>Paris e Lyon.</p>
+        <p>Arte, museus e a Torre Eiffel.</p>
+    </div>
+
+    <div class="card-pais">
+        <h3><span class="flag">🇩🇪</span> Alemanha</h3>
+        <p>Konstanz.</p>
+        <p>História, castelos e paisagens incríveis.</p>
+    </div>
+
+    <div class="card-pais">
+        <h3><span class="flag">🇨🇭</span> Suíça</h3>
+        <p>Genebra, Berna, Zurique e outras cidades.</p>
+        <p>Lagos cristalinos e montanhas deslumbrantes.</p>
+    </div>
+
+    <div class="card-pais">
+        <h3><span class="flag">🇮🇹</span> Itália</h3>
+        <p>Milão.</p>
+        <p>Arte, moda e gastronomia mundialmente famosa.</p>
+    </div>
+
+    <div class="card-pais">
+        <h3><span class="flag">🇦🇩</span> Andorra</h3>
+        <p>Entre França e Espanha.</p>
+        <p>Compras, neve e paisagens de montanha.</p>
+    </div>
+
+</section>
+
+</main>
+
+<footer>
+    <p>© 2026 Brasileiros pelo Mundo</p>
+</footer>
+
+</body>
+</html>

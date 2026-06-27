@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Passeios - Brasileiros pelo Mundo</title>
+
+<meta name="description" content="Descubra os melhores passeios na Europa: Portugal, Espanha, França, Itália e mais.">
+<meta name="keywords" content="passeios, europa, turismo, viagens, brasileiros">
+<meta name="author" content="Brasileiros pelo Mundo">
+
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+
+/* =========================
+   TÍTULO
+========================= */
+
+.page-title {
+    text-align: center;
+    padding: 30px 10px;
+}
+
+/* =========================
+   GRID
+========================= */
+
+.passeios {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.card-passeio {
+    background: #fff;
+    border-radius: 16px;
+    padding: 18px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    border-left: 5px solid #6ec1e4;
+}
+
+.card-passeio:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* TEXTOS */
+.card-passeio h3 {
+    margin-bottom: 10px;
+}
+
+.resumo {
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.detalhes {
+    margin-top: 10px;
+    color: #333;
+}
+
+/* BOTÃO */
+button {
+    background: #6ec1e4;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #4aa3cc;
+}
+
+/* OCULTO */
+.oculto {
+    display: none;
+}
+
+/* RESPONSIVO */
+@media (max-width: 600px) {
+    .card-passeio {
+        padding: 14px;
+    }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+    <h1>Brasileiros pelo Mundo</h1>
+</header>
+
+<!-- MENU -->
+<nav class="menu">
+    <ul>
+        <li><a href="index.html">🏠 Início</a></li>
+        <li><a href="destinos.html">🌍 Destinos</a></li>
+        <li><a href="passeios.html">🎡 Passeios</a></li>
+        <li><a href="comidas.html">🍽️ Comidas</a></li>
+        <li><a href="passagens.html">✈️ Passagens</a></li>
+        <li><a href="contato.html">📩 Contato</a></li>
+    </ul>
+</nav>
+
+<main>
+
+<div class="page-title">
+    <h2>🎡 Passeios na Europa</h2>
+    <p>Descubra os lugares mais incríveis para visitar</p>
+</div>
+
+<section class="passeios">
+
+    <!-- PORTUGAL -->
+    <div class="card-passeio portugal">
+        <h3>🇵🇹 Torre de Belém (Lisboa)</h3>
+        <p class="resumo">Monumento histórico às margens do rio Tejo.</p>
+        <button onclick="toggle(this)">Ver mais</button>
+        <p class="detalhes oculto">Um dos símbolos de Portugal, perfeito ao pôr do sol.</p>
+    </div>
+
+    <div class="card-passeio portugal">
+        <h3>🇵🇹 Porto Ribeira</h3>
+        <p class="resumo">Zona histórica e vibrante do Porto.</p>
+        <button onclick="toggle(this)">Ver mais</button>
+        <p class="detalhes oculto">Restaurantes, vinho do Porto e vista incrível do rio Douro.</p>
+    </div>
+
+    <!-- ESPANHA -->
+    <div class="card-passeio espanha">
+        <h3>🇪🇸 Sagrada Família</h3>
+        <p class="resumo">Obra-prima de Gaudí em Barcelona.</p>
+        <button onclick="toggle(this)">Ver mais</button>
+        <p class="detalhes oculto">Arquitetura única em construção há mais de 100 anos.</p>
+    </div>
+
+    <div class="card-passeio espanha">
+        <h3>🇪🇸 Parque Güell</h3>
+        <p class="resumo">Parque colorido e artístico.</p>
+        <button onclick="toggle(this)">Ver mais</button>
+        <p class="detalhes oculto">Vista panorâmica de Barcelona e mosaicos incríveis.</p>
+    </div>
+
+    <!-- FRANÇA -->
+    <div class="card-passeio franca">
+        <h3>🇫🇷 Torre Eiffel</h3>
+        <p class="resumo">Ícone de Paris.</p>
+        <button onclick="toggle(this)">Ver mais</button>
+        <p class="detalhes oculto">Iluminação noturna incrível e vista da cidade.</p>
+    </div>
+
+    <div class="card-passeio franca">
+        <h3>🇫🇷 Museu do Louvre</h3>
+        <p class="resumo">Maior museu do mundo.</p>
+        <button onclick="toggle(this)">Ver mais</button>
+        <p class="detalhes oculto">Casa da Mona Lisa e obras históricas famosas.</p>
+    </div>
+
+    <!-- ITÁLIA -->
+    <div class="card-passeio italia">
+        <h3>🇮🇹 Coliseu de Roma</h3>
+        <p class="resumo">Antigo anfiteatro romano.</p>
+        <button onclick="toggle(this)">Ver mais</button>
+        <p class="detalhes oculto">Um dos monumentos mais visitados do mundo.</p>
+    </div>
+
+    <div class="card-passeio italia">
+        <h3>🇮🇹 Veneza</h3>
+        <p class="resumo">Cidade dos canais.</p>
+        <button onclick="toggle(this)">Ver mais</button>
+        <p class="detalhes oculto">Passeio de gôndola e ruas sobre a água.</p>
+    </div>
+
+</section>
+
+</main>
+
+<footer>
+    <p>© 2026 Brasileiros pelo Mundo - Todos os direitos reservados</p>
+</footer>
+
+<script>
+function toggle(btn) {
+    const details = btn.nextElementSibling;
+
+    if (!details) return;
+
+    details.classList.toggle("oculto");
+    btn.innerText = details.classList.contains("oculto")
+        ? "Ver mais"
+        : "Mostrar menos";
+}
+</script>
+
+</body>
+</html>
