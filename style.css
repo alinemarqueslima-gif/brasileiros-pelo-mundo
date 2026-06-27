@@ -10,6 +10,8 @@
 }
 
 body {
+    margin: 0;
+    padding: 20px;
     background: #f6f8fb;
     color: #2c3e50;
     line-height: 1.6;
@@ -68,7 +70,7 @@ header p {
 }
 
 /* =========================
-   HERO (IMAGEM PRINCIPAL)
+   HERO
 ========================= */
 
 .hero {
@@ -125,7 +127,7 @@ header p {
 }
 
 /* =========================
-   TÍTULOS DE PÁGINA
+   TÍTULOS
 ========================= */
 
 .page-title {
@@ -142,7 +144,7 @@ header p {
 }
 
 /* =========================
-   GRID GERAL (CARDS)
+   CARDS / GRID
 ========================= */
 
 .paises,
@@ -153,10 +155,6 @@ header p {
     gap: 20px;
     padding: 20px;
 }
-
-/* =========================
-   CARDS
-========================= */
 
 .card-pais,
 .card-passeio,
@@ -195,20 +193,7 @@ button:hover {
 }
 
 /* =========================
-   FILTROS
-========================= */
-
-.filtro {
-    text-align: center;
-    margin: 15px 0;
-}
-
-.filtro button {
-    margin: 5px;
-}
-
-/* =========================
-   OCULTAR (JS)
+   OCULTAR JS
 ========================= */
 
 .oculto,
@@ -217,7 +202,7 @@ button:hover {
 }
 
 /* =========================
-   FORMULÁRIO CONTATO
+   FORMULÁRIO
 ========================= */
 
 form {
@@ -235,6 +220,18 @@ input, textarea {
 }
 
 /* =========================
+   IMAGENS
+========================= */
+
+section img {
+    width: 220px;
+    height: 160px;
+    object-fit: cover;
+    margin: 5px;
+    border-radius: 10px;
+}
+
+/* =========================
    FOOTER
 ========================= */
 
@@ -247,10 +244,34 @@ footer {
 }
 
 /* =========================
-   RESPONSIVO
+   RESPONSIVO TABLET
+========================= */
+
+@media (max-width: 1024px) {
+    body {
+        padding: 15px;
+    }
+
+    section img {
+        width: 45%;
+        height: auto;
+    }
+
+    .menu ul {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+/* =========================
+   RESPONSIVO MOBILE
 ========================= */
 
 @media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
     .hero {
         height: 300px;
     }
@@ -259,117 +280,17 @@ footer {
         font-size: 1.5rem;
     }
 
-    .menu ul {
-        justify-content: center;
-    }
-}
-body {
-    font-family: Arial, sans-serif;
-}
-
-/* MENU */
-.menu {
-    background-color: #f3efef;
-    padding: 10px;
-}
-
-/* OUTRAS ESTILIZAÇÕES */
-
-/* 🔥  */
-section img {
-    width: 220px;
-    height: 160px;
-    object-fit: cover;
-    margin: 5px;
-    border-radius: 10px;
-}
-/* 📱 RESPONSIVO PARA CELULAR */
-@media (max-width: 768px) {
-
-    body {
-        padding: 10px;
-    }
-
-    h1 {
-        font-size: 22px;
+    h1, h2 {
         text-align: center;
     }
 
-    h2 {
-        font-size: 18px;
-        text-align: center;
-    }
-
-    /* imagens ficam em coluna */
     section img {
         width: 100%;
         height: auto;
-        margin-bottom: 10px;
     }
 
-    /* menu em coluna */
     .menu ul {
-        display: flex;
         flex-direction: column;
-        gap: 10px;
-        padding: 0;
-    }
-
-    .menu li {
-        text-align: center;
-    }
-}
-/* 📱💻 RESPONSIVO PARA TABLET */
-@media (max-width: 1024px) {
-
-    body {
-        padding: 15px;
-    }
-
-    h1 {
-        font-size: 28px;
-        text-align: center;
-    }
-
-    h2 {
-        font-size: 22px;
-        text-align: center;
-    }
-
-    /* imagens em grade menor */
-    section img {
-        width: 45%;
-        height: auto;
-        margin: 5px;
-    }
-
-    /* deixa o menu mais organizado */
-    .menu ul {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
-        padding: 0;
-    }
-
-    .menu li {
-        list-style: none;
-    }
-}
-body {
-    margin: 0;
-    padding: 30px;
-}
-
-/* tablet e celular ajustam o espaço */
-@media (max-width: 1024px) {
-    body {
-        padding: 20px;
-    }
-}
-
-@media (max-width: 768px) {
-    body {
-        padding: 15px;
+        align-items: center;
     }
 }
